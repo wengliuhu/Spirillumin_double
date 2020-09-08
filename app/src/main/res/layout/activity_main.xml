@@ -1,0 +1,501 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/applicationcolor"
+    tools:context=".zzcsoft.spirilluminspection.MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textViewDeviceID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="28dp"
+            android:text="设备：YM-Z01" />
+
+        <TextView
+            android:id="@+id/textViewVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textViewSystemDateTile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textViewVersion"
+            android:layout_alignBottom="@+id/textViewVersion"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="28dp"
+            android:text="当前时间：" />
+        
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgButtonSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/topLayout"
+        android:onClick="Main_OnClick"
+        android:src="@drawable/btn_style1" >
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/imgButtonSetting"
+        android:layout_alignLeft="@+id/imgButtonSetting"
+        android:layout_alignRight="@+id/imgButtonSetting"
+        android:layout_alignTop="@+id/imgButtonSetting"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="系统设置"
+            android:textSize="18dp"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgButtonRecharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topLayout"
+        android:layout_marginRight="1px"
+        android:layout_toLeftOf="@+id/imgButtonSetting"
+        android:onClick="Main_OnClick"
+        android:src="@drawable/btn_style1" >
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/imgButtonRecharge"
+        android:layout_alignLeft="@+id/imgButtonRecharge"
+        android:layout_alignRight="@+id/imgButtonRecharge"
+        android:layout_alignTop="@+id/imgButtonSetting"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/recharge" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:gravity="center"
+            android:text="充值"
+            android:textSize="18dp"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+  <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/topLayout"
+        android:layout_marginRight="1dip"
+        android:layout_toLeftOf="@+id/imgButtonRecharge"
+        android:background="@drawable/title_bg" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_title"
+                android:textSize="18dip"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textViewAppOrgan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dip"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewRecharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="剩余：150次"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+        
+        
+        
+        
+        
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bg" >
+
+        <TextView
+            android:id="@+id/textViewBottomMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="除指定样式的呼吸卡以外 ，严禁将其它物品插入检测口内"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/textViewBottomMessage"
+            android:src="@drawable/police" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/leftLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleLayout" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textViewInspectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/imageViewInspection"
+                android:layout_alignRight="@+id/imageViewInspection"
+                android:gravity="center_horizontal"
+                android:textSize="18dp"
+                android:text="工作状态 " />
+
+            <ImageView
+                android:id="@+id/imageViewInspection"
+                android:layout_width="300dip"
+                android:layout_height="300dip"
+                android:layout_below="@+id/textViewInspectionTitle"
+                android:layout_marginBottom="20dip"
+                android:layout_marginLeft="30dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="20dip"
+                android:onClick="Main_OnClick"
+                android:src="@drawable/inspection_end" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/imageViewInspection"
+                android:layout_alignLeft="@+id/imageViewInspection"
+                android:layout_alignRight="@+id/imageViewInspection"
+                android:layout_alignTop="@+id/imageViewInspection"
+                android:layout_margin="40dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textViewInspection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="开始检测"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28dip" />
+
+                <Chronometer
+                    android:id="@+id/chronometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28dip"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rightLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/leftLayout"
+        android:layout_below="@+id/titleLayout"
+        android:layout_toRightOf="@+id/leftLayout" >
+
+        <TextView
+            android:id="@+id/textViewTesting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:text="检测记录" />
+
+        <LinearLayout
+            android:id="@+id/recordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewTesting"
+            android:background="@drawable/record_title"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="样品编号"
+                android:textSize="18dip"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="姓名"
+                android:textSize="18dip"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="检测结果"
+                android:textSize="18dip"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="DPM"
+                android:textSize="18dip"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="检测时间"
+                android:textSize="18dip"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="检验员"
+                android:textSize="18dip"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="操作"
+                android:textSize="18dip"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewListViewMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/recordLayout"
+            android:gravity="center"
+            android:text="暂无数据"
+            android:textColor="@color/deputycolor"
+            android:textSize="28dip"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/recordList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/recordLayout"
+            android:divider="@null" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_below="@+id/rightLayout"
+        android:layout_toRightOf="@+id/leftLayout" >
+
+        <ImageView
+            android:id="@+id/imgButtonSelect"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="Main_OnClick"
+            android:src="@drawable/btn_style2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/imgButtonSelect"
+            android:layout_alignLeft="@+id/imgButtonSelect"
+            android:layout_alignRight="@+id/imgButtonSelect"
+            android:layout_alignTop="@+id/imgButtonSelect"
+            android:gravity="center"
+            android:text="查看所有数据"
+            android:textSize="20dip"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/imgButtonDelete"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="Main_OnClick"
+            android:src="@drawable/btn_style2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/imgButtonDelete"
+            android:layout_alignLeft="@+id/imgButtonDelete"
+            android:layout_alignRight="@+id/imgButtonDelete"
+            android:layout_alignTop="@+id/imgButtonDelete"
+            android:gravity="center"
+            android:text="删除所选条目"
+            android:textSize="20dip"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/imgButtonPrint"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imgButtonDelete"
+            android:onClick="Main_OnClick"
+            android:src="@drawable/btn_style2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/imgButtonPrint"
+            android:layout_alignLeft="@+id/imgButtonPrint"
+            android:layout_alignRight="@+id/imgButtonPrint"
+            android:layout_alignTop="@+id/imgButtonPrint"
+            android:gravity="center"
+            android:text="打印所选条目"
+            android:textSize="20dip"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_below="@+id/rightLayout"
+        android:layout_toLeftOf="@+id/buttonLayout" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <Button
+                android:id="@+id/editTextJYY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/editTextKS"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/edittext_board"
+                android:ems="8"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingBottom="10dip"
+                android:paddingLeft="25dip"
+                android:paddingRight="25dip"
+                android:paddingTop="10dip" />
+
+            <TextView
+                android:id="@+id/textViewKS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/editTextKS"
+                android:layout_alignBottom="@+id/editTextKS"
+                android:layout_toLeftOf="@+id/editTextKS"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="科室："
+                android:textColor="#0FA7FF"
+                android:textSize="20dip" />
+
+            <TextView
+                android:id="@+id/textViewJYY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/editTextJYY"
+                android:layout_alignTop="@+id/editTextJYY"
+                android:layout_below="@+id/textViewKS"
+                android:layout_toLeftOf="@+id/editTextJYY"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="检验员："
+                android:textSize="20dip"
+                android:textColor="#0FA7FF" />
+
+            <Button
+                android:id="@+id/editTextKS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="18dp"
+                android:layout_toRightOf="@+id/textViewJYY"
+                android:background="@drawable/edittext_board"
+                android:ems="8"
+                android:paddingLeft="25dip"
+                android:paddingTop="10dip"
+                android:paddingRight="25dip"
+                android:paddingBottom="10dip"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

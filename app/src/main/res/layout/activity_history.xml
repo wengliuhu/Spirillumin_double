@@ -1,0 +1,293 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/applicationcolor"
+    tools:context="com.example.spirillumin.zzcsoft.history.HistoryActivity" >
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textViewSystemDateTile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgButtonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/topLayout"
+        android:onClick="Main_OnClick"
+        android:src="@drawable/btn_style1" >
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/imgButtonBack"
+        android:layout_alignLeft="@+id/imgButtonBack"
+        android:layout_alignRight="@+id/imgButtonBack"
+        android:layout_alignTop="@+id/imgButtonBack"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/topLayout"
+        android:layout_marginRight="1dip"
+        android:layout_toLeftOf="@+id/imgButtonBack"
+        android:background="@drawable/title_bg" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_title"
+                android:textSize="18dip"
+                android:textColor="#000000" />
+            
+            <TextView
+                android:id="@+id/textViewAppOrgan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="Main_OnClick"
+                android:textSize="18dip"
+                android:textColor="#000000" />
+            
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bg" >
+
+        <TextView
+            android:id="@+id/textViewBottomMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="除指定样式的呼吸卡以外 ，严禁将其它物品插入检测口内"
+            android:textSize="18dp"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/textViewBottomMessage"
+            android:src="@drawable/police" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/centerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fuctionLayout"
+        android:layout_below="@+id/titleLayout" >
+
+        <TextView
+            android:id="@+id/textViewTesting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="检测记录" />
+
+        <LinearLayout
+            android:id="@+id/recordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewTesting"
+            android:background="@drawable/record_title"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="样品编号"
+                android:textSize="18dip"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="姓名"
+                android:textSize="18dip"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="检测结果"
+                android:textSize="18dip"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="DPM"
+                android:textSize="18dip"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="检测时间"
+                android:textSize="18dip"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="检验员"
+                android:textSize="18dip"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="操作"
+                android:textSize="18dip"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/historyList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/recordLayout"
+            android:divider="@null" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fuctionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_above="@+id/bottomLayout" >
+
+        <ImageView
+            android:id="@+id/imgButtonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="Main_OnClick"
+            android:src="@drawable/btn_style2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/imgButtonDelete"
+            android:layout_alignLeft="@+id/imgButtonDelete"
+            android:layout_alignRight="@+id/imgButtonDelete"
+            android:layout_alignTop="@+id/imgButtonDelete"
+            android:gravity="center"
+            android:text="删除所选条目"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/imgButtonPrint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imgButtonDelete"
+            android:onClick="Main_OnClick"
+            android:src="@drawable/btn_style2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/imgButtonPrint"
+            android:layout_alignLeft="@+id/imgButtonPrint"
+            android:layout_alignRight="@+id/imgButtonPrint"
+            android:layout_alignTop="@+id/imgButtonPrint"
+            android:gravity="center"
+            android:text="小票打印"
+            android:textColor="#000000" />
+        
+        <ImageView
+            android:id="@+id/imgButtonDeleteAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imgButtonPrint"
+            android:onClick="Main_OnClick"
+            android:src="@drawable/btn_style2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/imgButtonDeleteAll"
+            android:layout_alignLeft="@+id/imgButtonDeleteAll"
+            android:layout_alignRight="@+id/imgButtonDeleteAll"
+            android:layout_alignTop="@+id/imgButtonDeleteAll"
+            android:gravity="center"
+            android:text="全部清空"
+            android:textColor="#000000" />
+        
+    </RelativeLayout>
+
+</RelativeLayout>

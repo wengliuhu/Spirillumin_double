@@ -1,0 +1,975 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/applicationcolor"
+    tools:context=".zzcsoft.setting.SettingActivity" >
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textViewDeviceId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView1"
+            android:layout_alignBottom="@+id/textView1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="28dp"
+            android:text="设备：YM-Z01" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgButtonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/topLayout"
+        android:src="@drawable/btn_style1" >
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/imgButtonBack"
+        android:layout_alignLeft="@+id/imgButtonBack"
+        android:layout_alignRight="@+id/imgButtonBack"
+        android:layout_alignTop="@+id/imgButtonBack"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/topLayout"
+        android:layout_marginRight="1dip"
+        android:layout_toLeftOf="@+id/imgButtonBack"
+        android:background="@drawable/title_bg" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textViewCompany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_title"
+                android:textSize="18dip"
+                android:textColor="#000000" />
+            
+            <TextView
+                android:id="@+id/textViewApplicationOrgan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dip"
+                android:textColor="#000000" />
+
+            
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bg" >
+
+        <TextView
+            android:id="@+id/textViewBottomMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="除指定样式的呼吸卡以外 ，严禁将其它物品插入检测口内"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/textViewBottomMessage"
+            android:src="@drawable/police" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/leftLayout"
+        android:layout_width="200dip"
+        android:layout_height="400dip"
+        android:layout_below="@+id/titleLayout" >
+
+        <ImageView
+            android:id="@+id/imageViewTop"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="30dip"
+            android:onClick="Setting_OnClick"
+            android:scaleType="fitXY"
+            android:src="@drawable/setting_top_down" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageViewTop"
+            android:layout_alignLeft="@+id/imageViewTop"
+            android:layout_alignRight="@+id/imageViewTop"
+            android:layout_alignTop="@+id/imageViewTop"
+            android:gravity="center"
+            android:text="仪器\n设置"
+            android:textColor="#FFFFFF"
+            android:textSize="28dip" />
+
+        <ImageView
+            android:id="@+id/imageViewBottom"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_below="@+id/imageViewTop"
+            android:layout_marginRight="10dip"
+            android:onClick="Setting_OnClick"
+            android:scaleType="fitXY"
+            android:src="@drawable/setting_bottom_up" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageViewBottom"
+            android:layout_alignLeft="@+id/imageViewBottom"
+            android:layout_alignRight="@+id/imageViewBottom"
+            android:layout_alignTop="@+id/imageViewBottom"
+            android:gravity="center"
+            android:text="检测\n设置"
+            android:textColor="#FFFFFF"
+            android:textSize="28dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tabLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_below="@+id/titleLayout"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@+id/leftLayout"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/textViewXTSJ"
+            android:layout_width="150dip"
+            android:layout_height="60dip"
+            android:layout_marginTop="10dip"
+            android:gravity="center|right"
+            android:singleLine="true"
+            android:text="系统时间："
+            android:textColor="#0FA7FF"
+            android:textSize="18dip" />
+
+        <Button
+            android:id="@+id/spinnerXTSJ"
+            android:layout_width="350dip"
+            android:layout_height="60dip"
+            android:layout_alignBottom="@+id/textViewXTSJ"
+            android:layout_toRightOf="@+id/textViewXTSJ"
+            android:background="@drawable/board"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:onClick="Setting_OnClick"
+            android:text="2017-12-18 16:20" />
+
+        <ImageView
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_alignBottom="@+id/spinnerXTSJ"
+            android:layout_alignRight="@+id/spinnerXTSJ"
+            android:paddingBottom="3dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/spinner_btn" />
+
+        <TextView
+            android:id="@+id/textViewDJSJ"
+            android:layout_width="150dip"
+            android:layout_height="60dip"
+            android:layout_below="@+id/textViewXTSJ"
+            android:gravity="center|right"
+            android:singleLine="true"
+            android:text="自适应时间："
+            android:textColor="#0FA7FF"
+            android:textSize="18dip" />
+
+        <Button
+            android:id="@+id/spinnerDJSJ"
+            android:layout_width="200dip"
+            android:layout_height="60dip"
+            android:layout_alignBottom="@+id/textViewDJSJ"
+            android:layout_marginLeft="6dip"
+            android:layout_toRightOf="@+id/textViewDJSJ"
+            android:background="@drawable/board"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:onClick="Setting_OnClick"
+            android:text="00:00" />
+
+        <ImageView
+            android:id="@+id/imageViewDJSJ"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_alignBottom="@+id/spinnerDJSJ"
+            android:layout_alignRight="@+id/spinnerDJSJ"
+            android:paddingBottom="3dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/spinner_btn" />
+
+        <TextView
+            android:id="@+id/textViewDSTD"
+            android:layout_width="150dip"
+            android:layout_height="60dip"
+            android:layout_below="@+id/textViewDJSJ"
+            android:layout_marginBottom="3dip"
+            android:layout_marginTop="30dp"
+            android:gravity="center|right"
+            android:singleLine="true"
+            android:text="单双通道："
+            android:textColor="#0FA7FF"
+            android:textSize="18dip" />
+
+        <Button
+            android:id="@+id/spinnerDSTD"
+            android:layout_width="200dip"
+            android:layout_height="60dip"
+            android:layout_alignBottom="@+id/textViewDSTD"
+            android:layout_marginLeft="6dip"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/textViewDSTD"
+            android:background="@drawable/board"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:onClick="Setting_OnClick"
+            android:text="双通道" />
+
+        <TextView
+            android:id="@+id/textViewJCSJ"
+            android:layout_width="150dip"
+            android:layout_height="60dip"
+            android:layout_below="@+id/textViewXTSJ"
+            android:layout_toRightOf="@+id/spinnerDJSJ"
+            android:gravity="center|right"
+            android:singleLine="true"
+            android:text="检测时间："
+            android:textColor="#0FA7FF"
+            android:textSize="18dip" />
+
+        <Button
+            android:id="@+id/spinnerJCSJ"
+            android:layout_width="200dip"
+            android:layout_height="60dip"
+            android:layout_alignBottom="@+id/textViewJCSJ"
+            android:layout_toRightOf="@+id/textViewJCSJ"
+            android:background="@drawable/board"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:onClick="Setting_OnClick"
+            android:text="3:00" />
+
+        <ImageView
+            android:id="@+id/imageViewJCSJ"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_alignBottom="@+id/spinnerJCSJ"
+            android:layout_alignRight="@+id/spinnerJCSJ"
+            android:paddingBottom="3dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/spinner_btn" />
+
+        <TextView
+            android:id="@+id/textViewMRDYJ"
+            android:layout_width="150dip"
+            android:layout_height="60dip"
+            android:layout_below="@+id/textViewJCSJ"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/spinnerDSTD"
+            android:gravity="center|right"
+            android:singleLine="true"
+            android:text="默认打印机："
+            android:textColor="#0FA7FF"
+            android:textSize="18dip" />
+
+        <Button
+            android:id="@+id/spinnerMRDYJ"
+            android:layout_width="200dip"
+            android:layout_height="60dip"
+            android:layout_alignBottom="@+id/textViewMRDYJ"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/textViewMRDYJ"
+            android:background="@drawable/board"
+            android:gravity="center"
+            android:onClick="Setting_OnClick"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="QR701" />
+
+        <TextView
+            android:id="@+id/textViewLine1"
+            android:layout_width="150dip"
+            android:layout_height="60dip"
+            android:layout_below="@+id/textViewMRDYJ"
+            android:gravity="center|right"
+            android:singleLine="true"
+            android:text="设备ID："
+            android:textColor="#0FA7FF"
+            android:textSize="18dip" />
+
+        <Button
+            android:id="@+id/spinnerDeviceId"
+            android:layout_width="450dip"
+            android:layout_height="60dip"
+            android:layout_alignBottom="@+id/textViewLine1"
+            android:layout_toRightOf="@+id/textViewLine1"
+            android:background="@drawable/board"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:onClick="Setting_OnClick" />
+
+        <TextView
+            android:id="@+id/textViewAppTitle"
+            android:layout_width="150dip"
+            android:layout_height="60dip"
+            android:layout_below="@+id/textViewLine1"
+            android:gravity="center|right"
+            android:singleLine="true"
+            android:text="医院名称："
+            android:textColor="#0FA7FF"
+            android:textSize="18dip" />
+
+        <Button
+            android:id="@+id/spinnerAppTitle"
+            android:layout_width="450dip"
+            android:layout_height="60dip"
+            android:layout_alignBottom="@+id/textViewAppTitle"
+            android:layout_toRightOf="@+id/textViewAppTitle"
+            android:background="@drawable/board"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:onClick="Setting_OnClick" />
+
+        <TextView
+            android:id="@+id/textViewSFM1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/spinnerDJSJ"
+            android:layout_alignRight="@+id/spinnerDJSJ"
+            android:layout_below="@+id/spinnerDJSJ"
+            android:gravity="center"
+            android:text="时 : 分 : 秒"
+            android:textColor="#e5253543" />
+
+        <TextView
+            android:id="@+id/textViewSFM2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/spinnerJCSJ"
+            android:layout_alignRight="@+id/spinnerJCSJ"
+            android:layout_below="@+id/spinnerJCSJ"
+            android:gravity="center"
+            android:text="时 : 分 : 秒"
+            android:textColor="#e5253543" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tabLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_below="@+id/titleLayout"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@+id/leftLayout"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/textViewKS"
+            android:layout_width="150dip"
+            android:layout_height="60dip"
+            android:layout_marginTop="10dip"
+            android:gravity="center|right"
+            android:singleLine="true"
+            android:text="科室："
+            android:textColor="#0FA7FF"
+            android:textSize="18dip" />
+
+        <Button
+            android:id="@+id/spinnerKS"
+            android:layout_width="200dip"
+            android:layout_height="60dip"
+            android:layout_alignBottom="@+id/textViewKS"
+            android:layout_marginLeft="6dip"
+            android:layout_toRightOf="@+id/textViewKS"
+            android:background="@drawable/board"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:onClick="Setting_OnClick" />
+
+        <TextView
+            android:id="@+id/textViewJYY"
+            android:layout_width="150dip"
+            android:layout_height="60dip"
+            android:layout_marginBottom="3dip"
+            android:layout_marginTop="10dip"
+            android:layout_toRightOf="@+id/spinnerKS"
+            android:gravity="center|right"
+            android:singleLine="true"
+            android:text="检验员："
+            android:textColor="#0FA7FF"
+            android:textSize="18dip" />
+
+        <Button
+            android:id="@+id/spinnerJYY"
+            android:layout_width="200dip"
+            android:layout_height="60dip"
+            android:layout_alignBottom="@+id/textViewJYY"
+            android:layout_marginLeft="6dip"
+            android:layout_toRightOf="@+id/textViewJYY"
+            android:background="@drawable/board"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:onClick="Setting_OnClick" />
+
+        <TextView
+            android:id="@+id/textViewLine2"
+            android:layout_width="match_parent"
+            android:layout_height="2dip"
+            android:layout_below="@+id/spinnerJYY"
+            android:layout_marginBottom="20dip" />
+
+        <RelativeLayout
+            android:id="@+id/adminLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textViewLine2" >
+
+            <TextView
+                android:id="@+id/textViewCS"
+                android:layout_width="120dip"
+                android:layout_height="60dip"
+                android:layout_alignParentTop="true"
+                android:gravity="center|right"
+                android:singleLine="true"
+                android:text="常数HL："
+                android:textColor="#0FA7FF"
+                android:textSize="18dip" />
+
+            <Button
+                android:id="@+id/editTextCS"
+                android:layout_width="wrap_content"
+                android:layout_height="60dip"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/textViewCS"
+                android:background="@drawable/edittext_board"
+                android:ems="6"
+                android:onClick="Setting_OnClick"
+                android:paddingBottom="10dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingTop="10dip"
+                android:text="000001" />
+
+            <TextView
+                android:id="@+id/textViewYXSX"
+                android:layout_width="120dip"
+                android:layout_height="60dip"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@+id/editTextCS"
+                android:gravity="center|right"
+                android:singleLine="true"
+                android:text="阴性上限 ："
+                android:textColor="#0FA7FF"
+                android:textSize="18dip" />
+
+            <Button
+                android:id="@+id/editTextYXSX"
+                android:layout_width="wrap_content"
+                android:layout_height="60dip"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/textViewYXSX"
+                android:background="@drawable/edittext_board"
+                android:ems="6"
+                android:onClick="Setting_OnClick"
+                android:paddingBottom="10dip"
+                android:paddingLeft="25dip"
+                android:paddingRight="25dip"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingTop="10dip"
+                android:text="000001" />
+
+            <TextView
+                android:id="@+id/textViewDPM1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@+id/editTextYXSX"
+                android:gravity="center"
+                android:text="DPM"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/textViewBQD"
+                android:layout_width="120dip"
+                android:layout_height="60dip"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@+id/textViewDPM1"
+                android:gravity="center|right"
+                android:singleLine="true"
+                android:text="不确定："
+                android:textColor="#0FA7FF"
+                android:textSize="18dip" />
+
+            <Button
+                android:id="@+id/editTextBQD"
+                android:layout_width="wrap_content"
+                android:layout_height="60dip"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/textViewBQD"
+                android:background="@drawable/edittext_board"
+                android:ems="6"
+                android:onClick="Setting_OnClick"
+                android:paddingBottom="10dip"
+                android:paddingLeft="25dip"
+                android:paddingRight="25dip"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingTop="10dip"
+                android:text="000001" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@+id/editTextBQD"
+                android:text="DPM"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/editTextYX1"
+                android:layout_width="wrap_content"
+                android:layout_height="60dip"
+                android:layout_alignLeft="@+id/editTextCS"
+                android:layout_alignRight="@+id/editTextCS"
+                android:layout_below="@+id/editTextCS"
+                android:background="@drawable/edittext_board"
+                android:ems="6"
+                android:onClick="Setting_OnClick"
+                android:paddingBottom="10dip"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingLeft="25dip"
+                android:paddingRight="25dip"
+                android:paddingTop="10dip"
+                android:text="000001" />
+
+            <TextView
+                android:id="@+id/textViewYX1"
+                android:layout_width="120dip"
+                android:layout_height="60dip"
+                android:layout_alignBottom="@+id/editTextYX1"
+                android:layout_alignTop="@+id/editTextYX1"
+                android:layout_toLeftOf="@+id/editTextYX1"
+                android:gravity="center|right"
+                android:singleLine="true"
+                android:text="阳性+："
+                android:textColor="#0FA7FF"
+                android:textSize="18dip" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editTextYX1"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@+id/editTextYX1"
+                android:text="DPM"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/editTextYX2"
+                android:layout_width="wrap_content"
+                android:layout_height="60dip"
+                android:layout_alignLeft="@+id/editTextYXSX"
+                android:layout_alignRight="@+id/editTextYXSX"
+                android:layout_below="@+id/editTextCS"
+                android:background="@drawable/edittext_board"
+                android:ems="6"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:onClick="Setting_OnClick"
+                android:paddingBottom="10dip"
+                android:paddingLeft="25dip"
+                android:paddingRight="25dip"
+                android:paddingTop="10dip"
+                android:text="000001" />
+
+            <TextView
+                android:id="@+id/textViewYX2"
+                android:layout_width="150dip"
+                android:layout_height="60dip"
+                android:layout_alignBottom="@+id/editTextYX2"
+                android:layout_alignTop="@+id/editTextYX2"
+                android:layout_marginLeft="30dip"
+                android:layout_toLeftOf="@+id/editTextYX2"
+                android:gravity="center|right"
+                android:singleLine="true"
+                android:text="阳性++："
+                android:textColor="#0FA7FF"
+                android:textSize="18dip" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editTextYX2"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@+id/editTextYX2"
+                android:text="DPM"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/editTextYX3"
+                android:layout_width="wrap_content"
+                android:layout_height="60dip"
+                android:layout_alignLeft="@+id/editTextBQD"
+                android:layout_alignRight="@+id/editTextBQD"
+                android:layout_below="@+id/editTextYXSX"
+                android:background="@drawable/edittext_board"
+                android:ems="6"
+                android:textColor="@color/black"
+                android:onClick="Setting_OnClick"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingBottom="10dip"
+                android:paddingLeft="25dip"
+                android:paddingRight="25dip"
+                android:paddingTop="10dip"
+                android:text="000001" />
+
+            <TextView
+                android:id="@+id/textViewYX3"
+                android:layout_width="150dip"
+                android:layout_height="60dip"
+                android:layout_alignBottom="@+id/editTextYX3"
+                android:layout_alignTop="@+id/editTextYX3"
+                android:layout_toLeftOf="@+id/editTextYX3"
+                android:gravity="center|right"
+                android:singleLine="true"
+                android:text="阳性+++："
+                android:textColor="#0FA7FF"
+                android:textSize="18dip" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editTextYX3"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@+id/editTextYX3"
+                android:text="DPM"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/editTextBDA"
+                android:layout_width="wrap_content"
+                android:layout_height="60dip"
+                android:layout_alignLeft="@+id/editTextYX1"
+                android:layout_alignRight="@+id/editTextYX1"
+                android:layout_below="@+id/editTextYX1"
+                android:background="@drawable/edittext_board"
+                android:ems="6"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:onClick="Setting_OnClick"
+                android:paddingBottom="10dip"
+                android:paddingLeft="25dip"
+                android:paddingRight="25dip"
+                android:paddingTop="10dip"
+                android:text="000001" />
+
+            <TextView
+                android:id="@+id/textViewBDA"
+                android:layout_width="120dip"
+                android:layout_height="60dip"
+                android:layout_alignBottom="@+id/editTextBDA"
+                android:layout_alignTop="@+id/editTextBDA"
+                android:layout_marginLeft="30dip"
+                android:layout_toLeftOf="@+id/editTextBDA"
+                android:gravity="center|right"
+                android:singleLine="true"
+                android:text="本底A："
+                android:textColor="#0FA7FF"
+                android:textSize="18dip" />
+
+            <TextView
+                android:id="@+id/textViewMIN1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editTextBDA"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@+id/editTextBDA"
+                android:text="min"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/editTextBDA"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/textViewMIN1"
+                android:text="-1"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/editTextBDB"
+                android:layout_width="wrap_content"
+                android:layout_height="60dip"
+                android:layout_alignLeft="@+id/editTextYX2"
+                android:layout_alignRight="@+id/editTextYX2"
+                android:layout_below="@+id/editTextYX2"
+                android:background="@drawable/edittext_board"
+                android:ems="6"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:onClick="Setting_OnClick"
+                android:paddingBottom="10dip"
+                android:paddingLeft="25dip"
+                android:paddingRight="25dip"
+                android:paddingTop="10dip"
+                android:text="000001" />
+
+            <TextView
+                android:id="@+id/textViewBDB"
+                android:layout_width="120dip"
+                android:layout_height="60dip"
+                android:layout_alignBottom="@+id/editTextBDB"
+                android:layout_alignTop="@+id/editTextBDB"
+                android:layout_toLeftOf="@+id/editTextBDB"
+                android:gravity="center|right"
+                android:singleLine="true"
+                android:text="本底B："
+                android:textColor="#0FA7FF"
+                android:textSize="18dip" />
+
+            <TextView
+                android:id="@+id/textViewMIN2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editTextBDB"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@+id/editTextBDB"
+                android:text="min"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/editTextBDB"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/textViewMIN2"
+                android:text="-1"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/editTextBD"
+                android:layout_width="wrap_content"
+                android:layout_height="60dip"
+                android:layout_alignLeft="@+id/editTextYX3"
+                android:layout_alignRight="@+id/editTextYX3"
+                android:layout_below="@+id/textViewYX3"
+                android:background="@drawable/edittext_board"
+                android:ems="6"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:onClick="Setting_OnClick"
+                android:paddingBottom="10dip"
+                android:paddingLeft="25dip"
+                android:paddingRight="25dip"
+                android:paddingTop="10dip"
+                android:text="000001" />
+
+            <TextView
+                android:id="@+id/textViewBD"
+                android:layout_width="120dip"
+                android:layout_height="60dip"
+                android:layout_below="@+id/textViewYX3"
+                android:layout_toLeftOf="@+id/editTextBD"
+                android:gravity="center|right"
+                android:singleLine="true"
+                android:text="本底(量限值)："
+                android:textColor="#0FA7FF"
+                android:textSize="18dip" />
+
+            <TextView
+                android:id="@+id/textViewMIN3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editTextBD"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@+id/editTextBD"
+                android:text="min"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/editTextBD"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/textViewMIN3"
+                android:text="-1"
+                android:textSize="14dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgButtonSelfCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40dip"
+        android:layout_marginRight="50dip"
+        android:onClick="Setting_OnClick"
+        android:src="@drawable/btn_style2" />
+
+    <TextView
+        android:id="@+id/textViewSelfCheck"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/imgButtonSelfCheck"
+        android:layout_alignLeft="@+id/imgButtonSelfCheck"
+        android:layout_alignRight="@+id/imgButtonSelfCheck"
+        android:layout_alignTop="@+id/imgButtonSelfCheck"
+        android:gravity="center"
+        android:text="本底检测"
+        android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/imageViewSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imgButtonSelfCheck"
+        android:layout_marginRight="50dip"
+        android:layout_toLeftOf="@+id/imgButtonSelfCheck"
+        android:onClick="Setting_OnClick"
+        android:src="@drawable/btn_style2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/imageViewSave"
+        android:layout_alignLeft="@+id/imageViewSave"
+        android:layout_alignRight="@+id/imageViewSave"
+        android:layout_alignTop="@+id/imageViewSave"
+        android:gravity="center"
+        android:text="保存设置"
+        android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/imgButtonReSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imgButtonSelfCheck"
+        android:layout_marginRight="50dip"
+        android:layout_toLeftOf="@+id/imageViewSave"
+        android:onClick="Setting_OnClick"
+        android:src="@drawable/btn_style2" />
+
+    <TextView
+        android:id="@+id/textViewReSet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/imgButtonReSet"
+        android:layout_alignLeft="@+id/imgButtonReSet"
+        android:layout_alignRight="@+id/imgButtonReSet"
+        android:layout_alignTop="@+id/imgButtonReSet"
+        android:gravity="center"
+        android:text="恢复出厂设置"
+        android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/imgButtonPWD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imgButtonSelfCheck"
+        android:layout_marginRight="50dip"
+        android:layout_toLeftOf="@+id/imgButtonReSet"
+        android:onClick="Setting_OnClick"
+        android:src="@drawable/btn_style2" />
+
+    <TextView
+        android:id="@+id/textViewPWD"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/imgButtonPWD"
+        android:layout_alignLeft="@+id/imgButtonPWD"
+        android:layout_alignRight="@+id/imgButtonPWD"
+        android:layout_alignTop="@+id/imgButtonPWD"
+        android:gravity="center"
+        android:text="设置密码"
+        android:textColor="#000000" />
+</RelativeLayout>
